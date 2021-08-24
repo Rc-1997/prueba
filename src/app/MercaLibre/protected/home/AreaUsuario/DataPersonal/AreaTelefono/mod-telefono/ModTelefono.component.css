@@ -1,0 +1,38 @@
+.fondo{
+  padding: 15px;
+}
+.encabezado{
+  text-align: center;
+}
+.cuerpo{
+  width: 100%;
+}
+.div-botones{
+  width: 100%;
+}
+.space{
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+
+}
+.etiqueta{
+  width: 25%;
+}
+.form-control
+{
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 75%;
+}
+.input{
+  border: 0;
+  outline: none;
+  margin-left: 5%;
+  width: 70%;
+}
+.vencimiento{
+  width: 20%;
+}

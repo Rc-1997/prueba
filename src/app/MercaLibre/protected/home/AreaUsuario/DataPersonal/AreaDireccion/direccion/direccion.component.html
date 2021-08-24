@@ -1,0 +1,39 @@
+<div>
+  <span
+    >Direcciones
+    <i
+      class="fas fa-plus"
+      (click)="agregar()"
+      style="cursor: pointer; background-color: blue"
+    ></i>
+  </span>
+</div>
+<i class="far fa-question-circle color-blue" style="margin-left: 65%">Ayuda</i>
+<div class="data">
+  <div class="div-data" *ngFor="let direccion of direcciones; let i = index">
+    <p>direccion N°: {{ i }}</p>
+    <i
+      class="fas fa-chevron-right color-blue float cursor"
+      [matMenuTriggerFor]="menu"
+      (click)="change(direccion.id)"
+    ></i>
+
+    <p>coordenada: X:{{ direccion.x }} Y:{{ direccion.y }}</p>
+    <div *ngIf="direcciones.length - 1 == i; then br; else hr"></div>
+    <ng-template #br><br /></ng-template>
+    <ng-template #hr> <hr /></ng-template>
+  </div>
+</div>
+
+<mat-menu #menu="matMenu">
+  <!-- <button mat-menu-item>
+    <p (click)="abrir()">modificar :{{ this.indice }}</p>
+  </button> -->
+  <button mat-menu-item>
+    <p (click)="eliminar()">eliminar :{{ this.indice }}</p>
+  </button>
+  <button mat-menu-item>
+    <p (click)="modificar()">modificar: {{ this.indice }}</p>
+    <!-- <p [routerLink]="['Protected/usuario/direccion/mod/',this.indice]">modificar</p> -->
+  </button>
+</mat-menu>

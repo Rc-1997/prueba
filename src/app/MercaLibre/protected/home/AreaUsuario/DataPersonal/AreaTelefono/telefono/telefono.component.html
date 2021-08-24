@@ -1,0 +1,20 @@
+<div>
+  <h5 style="margin-left: 15px;">Telefonos</h5>
+  <div class="div-data cursor" *ngFor="let tel of Telefonos; let i = index">
+    <hr />
+    <table style="width: 100%" (click)="openModTel(tel)">
+      <tr>
+        <td class="comp1">
+          <a>Telefono N°{{ i }} : </a>
+        </td>
+        <td class="comp2">
+          <a> {{ tel?.tel }}</a>
+        </td>
+        <td class="comp3">
+          <i class="fas fa-chevron-right color-blue"></i>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+

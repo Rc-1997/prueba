@@ -1,0 +1,16 @@
+<form class="fondo" [formGroup]='Data' (ngSubmit)='guardar()'>
+  <div class="encabezado">
+    <h4>Cambiar {{accion}}:</h4>
+  </div>
+  <hr />
+  <div>
+    <label class="form-control"
+      ><span class="etiqueta">{{accion}} actual: </span>
+      <input class="input" type="text" formControlName=inputdata
+    /></label>
+  </div>
+  <hr />
+  <div>
+    <button (click)="guardar()" type="submit" class="btn btn-primary space" [disabled]='!this.Data.valid' >Guardar</button>
+  </div>
+</form>

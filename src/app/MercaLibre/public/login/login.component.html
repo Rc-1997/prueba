@@ -1,0 +1,68 @@
+<div class="fondo">
+  <div class="fondo_Tam1 color_amarrillo"></div>
+  <div class="fondo_Tam2 color_Grayl">
+    <br />
+  </div>
+  <div class="fondo_Tam3">
+    <br />
+  </div>
+</div>
+
+<div>
+  <div class="center">
+    <div>
+      <form class="login" [formGroup]="Login_form" (ngSubmit)="Login()">
+        <h4>¡Hola! Para seguir, ingresá tu teléfono, e‑mail o usuario</h4>
+        <div class="separador">
+          <input
+            class="form-control controls"
+            formControlName="nombre"
+            type="text"
+            placeholder="nombre"
+            #nombreinput
+          />
+          <!-- onBlur='' && !this.validUser-->
+        </div>
+        <div *appmostrarControl="this.Login_form.controls['nombre'].valid">
+          <!-- *ngIf="this.Login_form.controls['nombre'].valid" -->
+          <!-- *appmostrarControl="this.Login_form.controls['nombre'].valid" -->
+          <!-- [ngClass]="!this.Login_form.controls['nombre'].valid ? 'esconder' : 'mostrar' " -->
+          <br />
+          <!-- <label class="label" [ngClass]="!this.Login_form.controls['nombre'].valid? 'esconder' : 'mostrar'">
+              Contraseña: -->
+          <input
+            class="form-control controls"
+            type="password"
+            placeholder="contraseña"
+            formControlName="password"
+            id="inputPassword"
+          />
+          <!-- <input type="button" (click)="prueba('nuevovalor')" >
+          <span>{{this.Login_form.controls['nombre'].value | stringPura}}</span> <br>
+          <span>{{this.Login_form.controls['nombre'].value | stringimPura}}</span> -->
+
+          <label class="">
+            <input type="checkbox" (click)="mostrar()" />
+            Mostrar contraseña
+          </label>
+        </div>
+
+        <div class="separador">
+          <!-- [ngClass]="this.Login_form.invalid ? 'disabled' : 'enable'"
+                  [disabled]="this.Login_form.invalid"
+          -->
+          <!-- appComponenteValido [formValid]='this.Login_form.valid' -->
+
+          <button
+            class="boton"
+            [ngClass]="this.Login_form.invalid ? 'disabled' : 'enable'"
+            [disabled]="this.Login_form.invalid"
+            type="submit"
+          >
+            ingresar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

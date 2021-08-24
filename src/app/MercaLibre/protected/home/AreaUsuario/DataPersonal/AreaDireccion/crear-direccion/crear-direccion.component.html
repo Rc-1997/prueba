@@ -1,0 +1,12 @@
+<form  [formGroup]="newDireccion">
+  <h4>ingrese lso datos de la direccion</h4>
+  <label for="" class="form-control">
+    ingrese coordenada 'X'
+    <input type="number" placeholder="x" class="input" formControlName="coordX" >
+  </label>
+  <label for="" class="form-control">
+    ingrese coordenada 'y'
+    <input type="number" placeholder="x" class="input" formControlName="coordY">
+  </label>
+  <button class="aceptar" (click)='crear()' > agregar direccion </button>
+</form>

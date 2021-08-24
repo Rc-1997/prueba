@@ -1,0 +1,104 @@
+.lateral {
+  float: left;
+  width:15%;
+}
+.cursor {
+  cursor: pointer;
+}
+.color-amarillo {
+  background-color: #fff159;
+}
+.logoText{
+  float: left;
+  width: 50px;
+  height: 20px;
+  overflow: hidden;
+}
+.sinseparacion{
+  line-height: none;
+}
+.logo {
+  background-image: url("https://http2.mlstatic.com/frontend-assets/ui-navigation/5.14.5/mercadolibre/logo__small.png");
+  background-size: 100%,100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.comp-enc-height {
+  height: 50px;
+}
+.comp-enc-width {
+  width: 100%;
+}
+.input{
+  width: 90%;
+  float: left;
+}
+.seach{
+  height: 100%;
+  width: 10%;
+}
+.tabla {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.c1{
+  width: 10%;
+  text-align: left;
+}
+.c2{
+  width: 40%;
+  text-align: left;
+}
+.c3{
+  width: 20%;
+  text-align: right;
+}
+.separador {
+  padding-top: 5px;
+}
+.fila {
+  width: 15%;
+  height: 50px;
+}
+.encabezado {
+  text-align: center;
+  width: 100%;
+  height: 15%;
+  padding-top: 5px;
+}
+.cuerpo {
+  width:auto;
+  height: 100%;
+  padding: 50px;
+
+  background-color: #eee;
+}
+.pie {
+  width: 100%;
+  height: 5vmax;
+}
+.color-blue {
+  color: blue;
+}
+.div-data {
+  padding: 10px;
+
+}
+.data {
+  border-radius: 5px;
+  background-color: white;
+  width: 75%;
+}
+.comp1 {
+  width: 40%;
+}
+.comp2 {
+  width: 55%;
+}
+.comp3 {
+  width: 5%;
+}

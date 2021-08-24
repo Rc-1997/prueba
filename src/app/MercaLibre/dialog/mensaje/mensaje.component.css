@@ -1,0 +1,10 @@
+.body{
+  padding: 15px;
+  border-radius: 10px;
+}
+.text{
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}

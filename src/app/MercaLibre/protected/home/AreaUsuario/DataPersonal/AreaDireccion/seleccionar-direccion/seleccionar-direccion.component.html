@@ -1,0 +1,48 @@
+
+
+<div class="fondo">
+  <p>Elegí dónde recibir tus compras</p>
+  <p class="color-grayl">
+    Podrás ver costos y tiempos de entrega precisos en todo lo que busques.
+  </p>
+  <p>En una de tus direcciones</p>
+  <div>
+    <!-- ngfor -->
+    <fieldset id="direcciones">
+      <div *ngFor="let domicilio of domicilios" class="div-domicilio">
+        <label class="form-control direccion">
+          <input
+            type="radio"
+            name="direcciones"
+            (click)="emitSeleccion(domicilio.id)"
+          />
+          <a>Corrdenadas: </a>
+          <div>
+            <a>x: {{ domicilio.x }} </a>
+            <a>y: {{ domicilio.y }}</a>
+          </div>
+          <hr />
+          <a>cambiar domicilio</a>
+        </label>
+      </div>
+      <hr />
+      <button
+        style="
+          text-align: center;
+          margin-left: 40%;
+          margin-right: 40%;
+          width: 20%;
+          height: 35px;
+          color: white;
+          background-color: red;
+        "
+        *ngIf="this.ref"
+        class="form control"
+        (click)="close()"
+      >
+        cerrar
+      </button>
+    </fieldset>
+  </div>
+  <button (click)='agregarDireccion()' >agregar direccion</button>
+</div>

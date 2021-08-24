@@ -1,0 +1,24 @@
+.hide{
+  cursor: pointer;
+  color: blue;
+}
+.space{
+  margin: 10px;
+}
+.vencimiento{
+  width: 46%;
+  float: left;
+  margin-left: 4%;
+}
+.pantalla{
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  height:80vh;
+  padding: 15px;
+}
+.Formulario{
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 25px;
+}

@@ -1,0 +1,48 @@
+<mat-sidenav-container
+  [ngClass]="!this.state ? 'sidenav' : 'sidenav-retract'"
+  class="sidenav-container"
+>
+  <mat-sidenav
+    #drawer
+    (mouseleave)="retraer(drawer)"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [opened]="(isHandset$ | async) === false"
+    [mode]="over"
+    *ngIf="!this.state"
+  >
+    <br /><br />
+    <!-- [mode]="(isHandset$ | async) ? 'over' : 'side'" -->
+    <!-- fas fa-expand-arrows-alt -->
+    <mat-toolbar
+      ><label>
+        <p class="menu-expand">Menu</p>
+      </label>
+    </mat-toolbar>
+    <mat-nav-list>
+      <nav style="cursor: pointer" (click)='nav()'>
+        prueba page
+      </nav>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav
+    *ngIf="this.state"
+    fixedInViewport
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [opened]="true"
+    (mouseover)="expandir(drawer)"
+  >
+    <br /><br />
+    <i
+      style="cursor: pointer; text-align: center"
+      class="fas fa-expand-arrows-alt"
+    ></i>
+  </mat-sidenav>
+  <mat-sidenav-container>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+</mat-sidenav-container>

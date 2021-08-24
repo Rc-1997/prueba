@@ -1,0 +1,32 @@
+<form [formGroup]="modDireccion" (ngSubmit)='modificar()' >
+  <div class="fondo">
+    <div class="encabezado">
+      <h4>Datos del Domicilio:</h4>
+    </div>
+    <hr />
+    <div>
+      <label class="form-control"
+        ><span class="etiqueta">Coordenadas: </span>
+        <input
+          type="number"
+          class="input vencimiento"
+          formControlName="X"
+          placeholder="{{ domicilio?.x }}"
+        />/
+        <input
+          type="number"
+          formControlName="Y"
+          class="input vencimiento"
+          placeholder="{{ domicilio?.y }}"
+        />
+      </label>
+    </div>
+    <hr />
+    <div>
+      <button type="submit" class="btn btn-primary space">
+        aceptar
+      </button>
+      <button type="button" (click)='close()' class="btn btn-secondary space">Cancelar</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,22 @@
+.icon{
+  width: 15%;
+}
+.sidenav-container {
+  height: 100%;
+}
+.sidenav {
+  width: 100%;
+}
+.sidenav-retract {
+  width:100%;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

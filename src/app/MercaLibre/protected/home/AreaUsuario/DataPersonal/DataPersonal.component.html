@@ -1,0 +1,134 @@
+<div>
+  <div class="cuerpo">
+    <h2>Mis Datos</h2>
+    <div>
+      <span>Datos de cuenta </span>
+    </div>
+    <i class="far fa-question-circle color-blue" style="margin-left: 65%"
+      >Ayuda</i
+    >
+    <div class="data">
+      <div class="div-data cursor">
+        <table style="width: 100%" (click)="openModUser(usuario, 'usuario')">
+          <tr>
+            <td class="comp1">
+              <a> Usuario: </a>
+            </td>
+            <td class="comp2">
+              <a> {{ usuario?.usuario }}</a>
+            </td>
+            <td class="comp3">
+              <i class="fas fa-chevron-right color-blue"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <hr />
+      </div>
+
+      <div class="div-data cursor">
+        <table style="width: 100%" (click)="openModUser(usuario, 'password')">
+          <tr>
+            <td class="comp1">
+              <a> password: </a>
+            </td>
+            <td class="comp2">
+              <a> {{ usuario?.password }}</a>
+            </td>
+            <td class="comp3">
+              <i class="fas fa-chevron-right color-blue"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br />
+    <div>
+      <span>Datos personales </span>
+    </div>
+    <i class="far fa-question-circle color-blue" style="margin-left: 65%"
+      >Ayuda</i
+    >
+    <div class="data">
+      <div class="div-data cursor">
+        <table style="width: 100%">
+          <tr>
+            <td class="comp1">
+              <a> Nombre: </a>
+            </td>
+            <td class="comp2">
+              <a> {{ usuario?.name + ", " + usuario?.apellido }}</a>
+            </td>
+            <td class="comp3">
+              <i class="fas fa-chevron-right color-blue"></i>
+            </td>
+          </tr>
+        </table>
+        <hr />
+      </div>
+
+      <div class="div-data cursor">
+        <table style="width: 100%">
+          <tr>
+            <td class="comp1">
+              <a> Documento: </a>
+            </td>
+            <td class="comp2">
+              <a> {{ usuario?.dni }}</a>
+            </td>
+            <td class="comp3">
+              <i class="fas fa-chevron-right color-blue"></i>
+            </td>
+          </tr>
+        </table>
+        <hr />
+      </div>
+
+      <app-telefono></app-telefono>
+    </div>
+
+    <br />
+    <app-tarjeta></app-tarjeta>
+    <br />
+    <app-direccion></app-direccion>
+  </div>
+  <!-- modal -->
+  <!-- <ng-template #content let-modal>
+    <div *ngIf="this.typeCurrent=='telefono'; then telefono">
+    </div>
+    <ng-template #telefono >
+      <mod-telefono [Telefono]='this.current'></mod-telefono>
+    </ng-template>
+    <div *ngIf="this.typeCurrent=='tarjeta';then  tarjeta">
+    </div>
+    <ng-template #tarjeta>
+      <mod-tarjeta [Tarjeta]="this.current"></mod-tarjeta>
+    </ng-template>
+    <div *ngIf="(this.typeCurrent=='usuario'|| this.typeCurrent=='password');then  data">
+    </div>
+    <ng-template #data >
+      <mod-data-personal [usuario]='this.current' [accion]='this.typeCurrent' ></mod-data-personal>
+    </ng-template>
+
+  </ng-template> -->
+</div>
+
+<!-- <div>
+  <div class="encabezado color-amarillo">
+
+    <a class="logo absolute" tabindex="2">Mercado Libre</a>
+
+    <label class="">
+      <input type="text" />
+      <i class="fas fa-search cursor"></i>
+    </label>
+    <img
+      src="https://http2.mlstatic.com/D_NQ_663456-MLA45857928098_052021-OO.webp"
+      class="comp-enc-height cursor"
+      alt=""
+    />
+  </div>
+  <div class="cuerpo"></div>
+</div> -->

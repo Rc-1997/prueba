@@ -1,0 +1,45 @@
+<div>
+  <span
+    >Tarjetas<i
+      class="fas fa-plus"
+      (click)="agregar()"
+      style="cursor: pointer; background-color: blue"
+    ></i
+  ></span>
+</div>
+<i class="far fa-question-circle color-blue" style="margin-left: 65%">Ayuda</i>
+<div class="data">
+  <div class="div-data cursor" *ngFor="let tarjeta of Tarjetas; let i = index">
+    <table style="width: 100%">
+      <tr>
+        <td>
+          <img
+            src="https://www.mercadopago.com/org-img/MP3/API/logos/master.gif"
+            alt=""
+          />
+        </td>
+        <td>
+          <label>
+            Terminada en *****{{ cambiar(tarjeta?.Numero) | slice: -4 }}
+
+            <br />
+            <a>Master </a><br />
+            <span
+              >Vencimiento: {{ tarjeta?.Ven_Mes }}/{{ tarjeta?.Ven_year }}
+            </span>
+          </label>
+          <nav
+            class="cursor"
+            [routerLink]="['/Protected/usuario/tarjeta/mod', tarjeta.Numero]"
+          >
+            modificar
+          </nav>
+          <nav class="cursor" (click)="eliminar(tarjeta.id)">eliminar</nav>
+        </td>
+      </tr>
+    </table>
+    <div *ngIf="Tarjetas.length - 1 == i; then br; else hr"></div>
+    <ng-template #br><br /></ng-template>
+    <ng-template #hr> <hr /></ng-template>
+  </div>
+</div>

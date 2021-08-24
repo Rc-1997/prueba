@@ -1,0 +1,67 @@
+<div>
+  <div class="encabezado color-amarillo">
+    <table class="tabla">
+      <tr>
+        <td class="c1">
+          <table>
+            <tr>
+              <td
+                (click)="redirect('/Protected/prueba')"
+                style="cursor: pointer"
+              >
+                <a class="logo" tabindex="2"
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+                >
+              </td>
+              <td>
+                <span class="sinseparacion">mercado libre</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class="c2">
+          <input type="text" class="form-control input" />
+          <i
+            class="fas fa-search cursor search"
+            (click)="redirect('Protected/usuario/direccion/crear')"
+          ></i>
+        </td>
+        <td class="c3">
+          <img
+            src="https://http2.mlstatic.com/D_NQ_663456-MLA45857928098_052021-OO.webp"
+            class="comp-enc-height comp-enc-width cursor"
+            alt=""
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <i
+            class="fas fa-map-marker-alt cursor"
+            (click)="mostrarmodal(modaldireccion)"
+          >
+            enviar a {{ usuario?.name }} <br />
+            x:{{ domicilioActual?.x }} y: {{ domicilioActual?.y }}
+          </i>
+        </td>
+        <td
+          (click)="redirect('Protected/usuario/personalData')"
+          style="cursor: pointer"
+        >
+          botones
+        </td>
+        <td style="cursor: pointer" (click)="volver()">logout</td>
+      </tr>
+    </table>
+  </div>
+
+  <app-home-body></app-home-body>
+</div>
+
+<ng-template #modaldireccion>
+  <seleccionar-direccion
+    [ref]="this.modalRef"
+    (idEmit)="changeSeleccion($event)"
+  >
+  </seleccionar-direccion>
+</ng-template>

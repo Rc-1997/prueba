@@ -1,0 +1,23 @@
+<form [formGroup]="modTelefono" class="fondo">
+  <div class="encabezado">
+    <h4>Datos del telefono:</h4>
+  </div>
+  <hr />
+  <div>
+    <label class="form-control">
+      <span class="etiqueta">Numero: </span>
+      <input class="input prefijo" type="text" formControlName="Numero" />
+    </label>
+  </div>
+  <hr />
+  <div>
+    <button
+      type="button"
+      class="btn btn-primary space"
+      [disabled]="!this.modTelefono.valid"
+      (click)="guardar()"
+    >
+      Confirmar
+    </button>
+  </div>
+</form>

@@ -1,0 +1,49 @@
+<form [formGroup]="modTarjeta" class="fondo" (ngSubmit)="guardar()">
+  <div class="encabezado">
+    <h4>Datos de la tarjeta:</h4>
+  </div>
+  <hr />
+  <div>
+    <label class="form-control"
+      ><span class="etiqueta">Numero: </span>
+      <input formControlName="numeroTarjeta" class="input" type="text"
+    /></label>
+    <label class="form-control">
+      <span class="etiqueta"> nombre:</span>
+      <input formControlName="nombreTarjeta" class="input" type="text"
+    /></label>
+    <label class="form-control"
+      ><span class="etiqueta">vencimiento:</span>
+      <input
+        formControlName="mesVencimiento"
+        type="number"
+        class="input vencimiento"
+        placeholder="mes"
+        maxlength="2"
+        minlength="2"
+      />/
+      <input
+        formControlName="yearVencimiento"
+        type="number"
+        class="input vencimiento"
+        placeholder="Año"
+        maxlength="4"
+        minlength="4"
+      />
+    </label>
+    <label class="form-control">
+      <span class="etiqueta"> Codigo:</span>
+      <input formControlName="codigoTarjeta" class="input" type="text"
+    /></label>
+  </div>
+  <hr />
+  <div>
+    <button
+      type="submit"
+      class="btn btn-primary space"
+      [disabled]="!this.modTarjeta.valid"
+    >
+      Confirmar
+    </button>
+  </div>
+</form>

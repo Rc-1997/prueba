@@ -1,0 +1,79 @@
+<form [formGroup]="form" class="pantalla" (ngSubmit)="Add()">
+  <div class="Formulario">
+    <h1 class="hide">Agregar Tarjeta</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <label class="form-label">Ingrese Numero: </label>
+        </div>
+        <div class="col-7">
+          <input
+            placeholder="Numero de la tarjeta"
+            class="form-control"
+            formControlName="Numero"
+            type="number"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label class="form-label">Ingrese Nombre </label>
+        </div>
+
+        <div class="col-7">
+          <input
+            placeholder="Nombre en la tarjeta"
+            class="form-control"
+            formControlName="Nombre"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <label class="form-label">Ingrese codigo </label>
+        </div>
+        <div class="col-7">
+          <input
+            class="form-control"
+            formControlName="Codigo"
+            type="text"
+            placeholder="Cvv"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <label class="form-label">Fecha de vencimiento </label>
+        </div>
+        <div class="col-5">
+          <input
+            class="form-control vencimiento"
+            formControlName="Mes"
+            id="Mes"
+            placeholder="Mes"
+            type="number"
+          />
+          <input
+            class="form-control vencimiento"
+            formControlName="Year"
+            placeholder="Año"
+            type="number"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col 1">
+          <button type="submit" class="btn btn-success space">
+            <!-- [disabled]="this.form.invalid" -->
+            Agregar
+          </button>
+
+          <button type="button" (click)="Back()" class="btn btn-primary space">
+            volver
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

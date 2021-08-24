@@ -1,0 +1,73 @@
+.lateral {
+  width:15%;
+}
+.center{
+  width: 85%;
+}
+
+.fondo {
+  z-index: 1;
+  position: fixed;
+  height: 15vpx;
+  width: 100%;
+}
+
+.fondo_Tam1 {
+  height: 35vh;
+}
+.fondo_Tam2 {
+  height: 55vh;
+}
+.fondo_Tam3 {
+  height: 10vh;
+}
+.login {
+  text-align: left;
+  width: 30%;
+  height: 61%;
+  margin: 35%;
+  margin-top: 8%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5%;
+  padding-top: 5%;
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+}
+.controls {
+  width: 100%;
+}
+.boton {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0px;
+  border-radius: 10px;
+  height: 4vmax;
+}
+.disabled {
+  background-color: red;
+  color: black;
+}
+.enable {
+  background-color: blue;
+  color: white;
+}
+.separador {
+  margin-top: 10%;
+}
+.color_amarrillo {
+  background-color: #fff059;
+}
+.color_Grayl {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.esconder {
+  display: none;
+}
+.mostrar {
+  display: initial;
+  margin-top: 10%;
+  /* animation:normal;
+  animation-duration: 1s; */
+}

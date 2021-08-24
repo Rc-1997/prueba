@@ -1,0 +1,11 @@
+.input {
+  width: auto;
+}
+.aceptar {
+  width: 20%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: blue;
+  color: white;
+}
